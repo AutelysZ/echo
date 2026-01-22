@@ -101,7 +101,7 @@ async function handleRequest(request: NextRequest): Promise<NextResponse> {
     data: data,
   }
 
-  return NextResponse.json(response, {
+  return new Response(JSON.stringify(response, void 0, 2), {
     headers: {
       'Content-Type': 'application/json',
     },
